@@ -33,7 +33,7 @@
 ;string-> list of morse code for each char
 (define (parse str)
   ((compose1 (curry map (λ(x) (hash-ref ltr->morse (string->symbol x)))) ;map each char to morse code
-             (curry filter (λ(x) (not (string=? "" x)))) ;remove empty strings
+             (curry filter-not (curry string=? "")) ;remove empty strings
              (curryr string-split "") string-downcase) ;down-case and split on each char
    str))
 
