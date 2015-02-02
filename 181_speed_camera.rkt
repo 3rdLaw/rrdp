@@ -1,5 +1,5 @@
 #lang racket
-(require "../../library.rkt")
+(require library/library)
 
 (define (convert-speed lst)
   (match-define (list num unit) lst)

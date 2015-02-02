@@ -1,5 +1,5 @@
 #lang racket
-(require sugar "../../library.rkt")
+(require sugar library/library)
 
 ;id is letter, rotation is one of (0 90 180 270), edges is list of 4 edges
 (struct tile (id rotation edges) #:transparent)
